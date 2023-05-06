@@ -28,7 +28,7 @@ const Login = () => {
     
     try{
    
-        const res =await axios.post("http://localhost:8800/api/auth/Login",inputs);
+        const res =await axios.post("",inputs);
         setCurrentUser(res.data);
         router.push('/Welcome')
       

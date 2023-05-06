@@ -5,7 +5,6 @@ const Welcome=()=>
 {
     const name=`Parth`;
 
- 
     return (
 
         <SafeAreaView style={styles.container}>

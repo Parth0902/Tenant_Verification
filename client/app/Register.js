@@ -4,7 +4,6 @@ import { Link ,useRouter} from "expo-router"
 import axios from 'axios'
 
 const Register = () => {
-
   const[inputs,setInputs]=useState({
     username:"",
     email:"",

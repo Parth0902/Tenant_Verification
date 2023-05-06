@@ -39,8 +39,8 @@ const Register = () => {
   return (
     <SafeAreaView style={styles.container}>
      <View style={styles.box}>
-       <TextInput placeholder="User Name" style={styles.input}/>
-       <TextInput placeholder="Password" style={styles.input}/>
+       <TextInput placeholder="User Name" style={styles.input} name="UserName"/>
+       <TextInput placeholder="Password" style={styles.input} name="Password"/>
        <TextInput placeholder="Confirm Password" style={styles.input}/>
        <Button title="Submit" color={'black'} />
       

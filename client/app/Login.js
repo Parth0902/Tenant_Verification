@@ -8,7 +8,7 @@ const Login = () => {
 
   const[inputs,setInputs]=useState({
     username:"",
-    email:"",
+    password:"",
    
   });
 

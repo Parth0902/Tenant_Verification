@@ -1,9 +1,41 @@
 import React from "react"
 import { SafeAreaView,StyleSheet,Button,ScrollView,TextInput,View,Text, Platform, StatusBar,FlatList } from "react-native"
-import { Link } from "expo-router"
-
+import { Link ,useRouter} from "expo-router"
+import axios from 'axios'
 
 const Register = () => {
+
+  const[inputs,setInputs]=useState({
+    username:"",
+    email:"",
+    password:"",
+  })
+
+  const [err,setErr]=useState(null)
+
+  const navigate=useRouter()
+  const handleChange=e=>
+  {
+    setInputs(prev=>({...prev,[e.target.name]: e.target.value}))
+  }
+
+
+
+  const handleSubmit= async e=>
+  {
+    e.preventDefault();
+    
+    try{
+
+      await axios.post("http://localhost:8800/api/auth/register",inputs)
+      navigate.push('/Login')
+      
+    } catch(err)
+    {
+      setErr(err.response.data)
+    }
+
+  }
   return (
     <SafeAreaView style={styles.container}>
      <View style={styles.box}>

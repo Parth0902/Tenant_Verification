@@ -10,7 +10,7 @@ const Login = () => {
        <TextInput placeholder="User Name" style={styles.input}/>
        <TextInput placeholder="Password" style={styles.input}/>
        <Button title="Submit" color={'black'} />
-       <Text>Don't have an accout <Link href={"/Form"} > <Text style={styles.link}>Register</Text></Link></Text>
+       <Text>Don't have an accout <Link href={"/Register"} > <Text style={styles.link}>Register</Text></Link></Text>
       
      </View>
     </SafeAreaView>

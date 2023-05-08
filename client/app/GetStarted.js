@@ -3,16 +3,16 @@ import{Link} from 'expo-router'
 
 const GetStarted = ()=> {
     return(
-        <SafeAreaView style={Style.container}>
-            <View style={Style.top}>
-                <Text style={Style.title}>
+        <SafeAreaView style={styles.container}>
+            <View style={styles.top}>
+                <Text style={styles.title}>
                     INTRODUCING name
                 </Text>
-                <Text style={Style.text}>Police verification made easier.</Text>
+                <Text style={styles.text}>Police verification made easier.</Text>
             </View>
-            <View style={Style.bottom}>
-                <Pressable style={Style.button}>
-                    <Link style={Style.buttonText} href="/Welcome">Get Started</Link>
+            <View style={styles.bottom}>
+                <Pressable style={styles.button}>
+                    <Link style={styles.buttonText} href="/Welcome">Get Started</Link>
                 </Pressable>
             </View>
            
@@ -21,13 +21,12 @@ const GetStarted = ()=> {
     );
 }
 
-const Style = StyleSheet.create({
+const styles = StyleSheet.create({
     container:{
         flex: 1,
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
         // justifyContent:'center',
         // alignItems:'center',
-        
         paddingHorizontal:50,
         gap:260,
 
@@ -47,13 +46,12 @@ const Style = StyleSheet.create({
     ,
     title:{
         fontSize:40,
-        fontWeight:500,
+        fontWeight:700,
         color:'black',
 
 
     },
     bottom:{
-        
         flex:2,
         alignItems:'center',
 
@@ -63,7 +61,6 @@ const Style = StyleSheet.create({
         backgroundColor:'black',
         width:150,
         height:35,
-        color:'white',
         justifyContent:'center',
         borderRadius:8,
     }

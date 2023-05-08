@@ -1,7 +1,6 @@
 import React from "react"
-import { SafeAreaView,StyleSheet,Button,ScrollView,TextInput,View,Text, Platform, StatusBar,FlatList } from "react-native"
-
-
+import { SafeAreaView,StyleSheet,Button,ScrollView,TextInput,View,Text, Platform, StatusBar,FlatList, Pressable } from "react-native"
+import{Link} from 'expo-router'
 
 const Form = () => {
   return (
@@ -20,7 +19,9 @@ const Form = () => {
             <TextInput placeholder="Gender" style={styles.input}/>
             <TextInput placeholder="Phone" style={styles.input}/>
             <TextInput placeholder="Email" keyboardType="email-address" style={styles.input}/>
-            <Button title="Submit" color={'black'}/>
+            <Pressable style={styles.button}>
+              <Link style={styles.buttonText} href="/Ack">SUBMIT</Link>
+            </Pressable>
         </ScrollView>
     </View>
     </SafeAreaView>
@@ -38,25 +39,34 @@ const styles = StyleSheet.create({
   header:{
     alignItems:'center'
   },
- header_text:{
- 
+  
+  header_text:{
     padding:20,
     fontSize:25,
- },
+  },
 
- 
 
- input:{
+  input:{
     borderColor:'#000',
     padding:10,
     marginBottom:10,
     borderWidth:1,
     width: 300,
+  },
 
+  button:{
+    backgroundColor:'black',
+    width:150,
+    height:35,
+    color:'white',
+    justifyContent:'center',
+    borderRadius:8,
+  },
 
-
-
- }
+  buttonText:{
+    color:'white',
+    textAlign:'center'
+  },
 
 })
 
